@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cakep-maroon: #800000;
+  --color-cakep-maroon-dark: #5A0000;
+  --color-cakep-heading: #0F172A;
+  --color-cakep-gray-light: #F8FAFC;
+  --color-cakep-text-main: #1E293B;
+  --color-cakep-text-muted: #64748B;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui;
+  --font-serif: var(--font-playfair), ui-serif, Georgia;
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+@utility animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+@utility animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+@utility animate-scale-in {
+  animation: scale-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-playfair: 'Playfair Display', serif;
+}
+
+section[id], div[id] {
+  scroll-margin-top: 100px;
+}
+
+body {
+  @apply bg-white text-cakep-text-main font-sans antialiased;
+}
+
+.rdp-day_selected {
+  background-color: #800000 !important;
+  color: white !important;
+  font-weight: 900;
+}
+
+.rdp-button:hover:not([disabled]):not(.rdp-day_selected) {
+  background-color: #F1F5F9 !important;
+}
