@@ -30,7 +30,7 @@ export default function Navbar() {
           <Link href="/" onClick={(e) => handleNavClick(e, 'home')} className="flex items-center gap-4 group cursor-pointer">
             <div className="relative w-36 h-12 flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
               <img 
-                src="/logo.jpg" 
+                src="/logo.png" 
                 alt="Berdikari Consultant Logo" 
                 className="w-full h-full object-contain"
                 onError={(e) => {
@@ -53,7 +53,7 @@ export default function Navbar() {
           </Link>
 
           <div className="hidden lg:flex items-center gap-10">
-            {['Home', 'About', 'Services', 'Cases'].map((item) => (
+            {['Home', 'About', 'Services'].map((item) => (
               <Link
                 key={item}
                 href={item === 'Home' ? '/' : `/#${item.toLowerCase()}`}
@@ -83,7 +83,7 @@ export default function Navbar() {
       {/* Mobile Menu Overlay */}
       <div className={`fixed inset-0 z-[90] bg-cakep-maroon-dark/95 backdrop-blur-xl lg:hidden transition-all duration-500 ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
         <div className="flex flex-col items-center justify-center h-full gap-8">
-          {['Home', 'About', 'Services', 'Cases'].map((item, idx) => (
+          {['Home', 'About', 'Services'].map((item, idx) => (
             <Link
               key={item}
               href={item === 'Home' ? '/' : `/#${item.toLowerCase()}`}

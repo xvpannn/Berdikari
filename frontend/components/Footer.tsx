@@ -13,7 +13,7 @@ export default function Footer() {
             <div className="flex items-center gap-4 group cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <div className="relative w-32 h-10 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
                 <img 
-                  src="/logo.jpg" 
+                  src="/logo.png" 
                   alt="Berdikari Consultant Logo" 
                   className="w-full h-full object-contain"
                   onError={(e) => {
@@ -55,7 +55,7 @@ export default function Footer() {
             <h3 className="text-lg font-black text-cakep-heading uppercase tracking-tight border-b-2 border-cakep-maroon/20 w-fit pb-2">Quick Links</h3>
             <ul className="space-y-4 text-slate-400 text-[9px] font-black uppercase tracking-[0.2em]">
               <li><a href="/#booking-card" className="hover:text-cakep-maroon transition">Booking</a></li>
-              <li><a href="/cases" className="hover:text-cakep-maroon transition">Track Case</a></li>
+              {/* <li><a href="/cases" className="hover:text-cakep-maroon transition">Track Case</a></li> */}
             </ul>
           </div>
 

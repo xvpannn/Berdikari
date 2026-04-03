@@ -5,7 +5,7 @@ import axios from 'axios';
 import { format } from 'date-fns';
 import { CheckCircle2, XCircle, Clock, Video, Send, X, ExternalLink } from 'lucide-react';
 
-const API_BASE = "http://localhost:5000/api";
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api";
 
 export default function BookingTable() {
   const [bookings, setBookings] = useState<any[]>([]);

@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Block AI crawlers (opsional)
+User-agent: GPTBot
+Disallow: /
+User-agent: CCBot
+Disallow: /
+
+Sitemap: https://berdikariconsultant.com/sitemap.xml

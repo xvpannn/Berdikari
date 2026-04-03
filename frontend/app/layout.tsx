@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import JsonLd from "@/components/JsonLd";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -15,38 +16,54 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://berdikariconsultant.com"), // Ganti dengan domain asli nanti
-  title: {
-    default: "CAKEP | Berdikari Consultant — Jasa Perizinan Strategis di Bali",
-    template: "%s | Berdikari Consultant"
-  },
-  description: "Berdikari Consultant membantu navigasi legalitas bisnis di Bali. Ahli dalam PBG/SLF, Izin HOREKA, KITAS, dan Konsultasi Bisnis Strategis.",
-  keywords: ["Jasa Perizinan Bali", "Pengurusan PBG Bali", "SLF Bali", "Legalitas Usaha Bali", "Konsultan Bisnis Bali", "KITAS Bali", "Berdikari Consultant"],
+  metadataBase: new URL("https://berdikariconsultant.com"),
+  title: "Berdikari Consultant | Jasa Perizinan & Legalitas Usaha di Bali",
+  description: "Konsultan perizinan terpercaya di Bali. Pengurusan PT, CV, NIB, PBG, SLF, KITAS, IMTA – cepat, transparan, konsultasi gratis.",
+  keywords: [
+    "jasa perizinan usaha Bali", 
+    "konsultan legalitas Bali", 
+    "pengurusan PT CV Bali", 
+    "KITAS Bali konsultan", 
+    "konsultan perizinan Denpasar",
+    "jasa PBG SLF Bali",
+    "pengurusan NIB OSS Bali",
+    "izin usaha ekspat Bali",
+    "konsultan perizinan bangunan Bali",
+    "RPTKA IMTA Bali"
+  ],
   authors: [{ name: "Berdikari Consultant" }],
   alternates: {
-    canonical: "/",
+    canonical: "https://berdikariconsultant.com/",
   },
   openGraph: {
-    title: "CAKEP | Berdikari Consultant — Strategic Compliance for Business Expansion",
-    description: "Mitra strategis perizinan dan legalitas bisnis terpercaya di Denpasar, Bali.",
-    url: "https://berdikariconsultant.com",
+    type: "website",
+    url: "https://berdikariconsultant.com/",
+    title: "Berdikari Consultant | Jasa Perizinan & Legalitas Usaha di Bali",
+    description: "Konsultan perizinan terpercaya di Bali. PT, CV, NIB, KITAS, PBG, SLF.",
     siteName: "Berdikari Consultant",
     images: [
       {
-        url: "/logo.jpg", // Menggunakan logo yang sudah ada di public
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Berdikari Consultant Logo",
+        alt: "Berdikari Consultant - Perizinan Bali",
       },
     ],
     locale: "id_ID",
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "CAKEP | Berdikari Consultant",
-    description: "Jasa Perizinan Strategis di Bali",
-    images: ["/logo.jpg"],
+    title: "Berdikari Consultant | Jasa Perizinan & Legalitas Usaha di Bali",
+    description: "Konsultan perizinan terpercaya di Bali. PT, CV, NIB, KITAS, PBG, SLF.",
+    images: ["/og-image.jpg"],
+  },
+  icons: {
+    icon: [
+      { url: "/logo.png", sizes: "any" },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
   },
   robots: {
     index: true,
@@ -66,42 +83,7 @@ export default function RootLayout({
   return (
     <html lang="id">
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LegalService",
-              "name": "Berdikari Consultant",
-              "url": "https://berdikariconsultant.com",
-              "logo": "https://berdikariconsultant.com/logo.jpg",
-              "description": "Jasa Perizinan dan Konsultan Bisnis Strategis di Bali (PBG, SLF, NIB, KITAS).",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Jl. Pulau Selayar No.18",
-                "addressLocality": "Denpasar",
-                "addressRegion": "Bali",
-                "postalCode": "80113",
-                "addressCountry": "ID"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": "-8.672396",
-                "longitude": "115.214521"
-              },
-              "telephone": "+628976767762",
-              "openingHoursSpecification": [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                  "opens": "09:00",
-                  "closes": "17:00"
-                }
-              ],
-              "priceRange": "$$"
-            })
-          }}
-        />
+        <JsonLd />
       </head>
       <body className={`${inter.variable} ${playfair.variable} bg-white text-slate-800 antialiased`}>
         {children}

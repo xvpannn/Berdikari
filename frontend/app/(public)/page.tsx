@@ -4,7 +4,8 @@ import React from 'react';
 import HeroSection from '../../components/HeroSection';
 import ServicesGrid from '../../components/ServicesGrid';
 import AboutSection from '../../components/AboutSection';
-import RecentCases from '../../components/RecentCases';
+import ValuesAndWorkflow from '../../components/ValuesAndWorkflow';
+// import RecentCases from '../../components/RecentCases';
 import PanicBanner from '../../components/PanicBanner';
 import BookingForm from '../../components/BookingForm';
 import Footer from '../../components/Footer';
@@ -15,7 +16,8 @@ export default function Home() {
       <HeroSection />
       <ServicesGrid />
       <AboutSection />
-      <RecentCases />
+      <ValuesAndWorkflow />
+      {/* <RecentCases /> */}
       <PanicBanner />
       <BookingForm />
       <Footer />

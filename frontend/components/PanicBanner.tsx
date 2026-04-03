@@ -1,20 +1,22 @@
 "use client";
 
 import React from 'react';
-import { MessageCircle, CheckCircle2, Star, Landmark } from 'lucide-react';
+import { MessageCircle, CheckCircle2, Landmark } from 'lucide-react';
 
 export default function PanicBanner() {
   return (
     <section className="bg-white overflow-hidden">
 
       {/* Testimonial Section - Refined Editorial Layout */}
+      {/* 
       <div className="container mx-auto px-6 lg:px-12 max-w-6xl py-24 lg:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
 
           <div className="lg:col-span-6 relative">
             <div className="space-y-8">
-               <div className="flex gap-1.5">
-                 {[...Array(5)].map((_, i) => <Star key={i} size={16} className="fill-cakep-maroon text-cakep-maroon" />)}
+               <div className="inline-flex items-center gap-3 bg-slate-50 px-4 py-2 rounded-full border border-slate-100 w-fit">
+                 <CheckCircle2 size={14} className="text-cakep-maroon" />
+                 <span className="text-[9px] font-black tracking-[0.3em] text-slate-400 uppercase">Legal Protection</span>
                </div>
                
                <h3 className="text-3xl lg:text-5xl font-black text-cakep-heading tracking-tighter leading-[1.1] uppercase">
@@ -24,13 +26,15 @@ export default function PanicBanner() {
 
                <div className="relative pl-10 border-l-2 border-slate-100">
                   <p className="text-xl lg:text-2xl font-serif text-slate-500 italic leading-relaxed">
-                    "<span className="notranslate" translate="no">Cakep</span> membantu kami menyelesaikan hambatan jalur merah bea cukai dengan sangat cepat. Strategis dan sangat profesional!"
+                    Kami hadir memastikan setiap langkah operasional bisnis Anda selalu berjalan aman, legal, dan mematuhi standar hukum yang berlaku tanpa hambatan birokrasi.
                   </p>
                   <div className="mt-8 flex items-center gap-4">
-                     <div className="w-12 h-12 bg-slate-100 rounded-full border border-slate-200" />
+                     <div className="w-12 h-12 bg-cakep-maroon/5 rounded-full border border-cakep-maroon/20 flex items-center justify-center">
+                        <Landmark size={20} className="text-cakep-maroon" />
+                     </div>
                      <div>
-                        <p className="text-cakep-heading font-black text-sm uppercase tracking-wider">Budi Artawan</p>
-                        <p className="text-cakep-maroon text-[9px] font-bold uppercase tracking-[0.2em]">Importer & Distributor Utama</p>
+                        <p className="text-cakep-heading font-black text-sm uppercase tracking-wider">Komitmen Kami</p>
+                        <p className="text-cakep-maroon text-[9px] font-bold uppercase tracking-[0.2em]">Berdikari Consultant</p>
                      </div>
                   </div>
                </div>
@@ -51,6 +55,7 @@ export default function PanicBanner() {
           </div>
         </div>
       </div>
+      */}
 
       {/* WA Support Banner - CLEAN LIGHT VERSION */}
       <div className="container mx-auto px-6 lg:px-12 max-w-6xl pb-24">

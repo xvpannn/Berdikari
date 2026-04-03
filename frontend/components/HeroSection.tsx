@@ -18,12 +18,12 @@ export default function HeroSection() {
             <div className="space-y-6">
               <div className="inline-flex items-center gap-3 bg-slate-50 px-5 py-2.5 rounded-full border border-slate-100 shadow-sm transition-transform hover:scale-105">
                 <Shield size={14} className="text-cakep-maroon" />
-                <span className="text-[10px] font-black tracking-[0.3em] text-slate-400 uppercase">Mitra Strategis</span>
+                <span className="text-[10px] font-black tracking-[0.3em] text-slate-400 uppercase">Jasa Perizinan Usaha Bali</span>
               </div>
               
               <h1 className="text-5xl lg:text-7xl font-black text-cakep-heading leading-[1.1] tracking-tighter">
-                Legalitas <br />
-                tanpa hambatan.
+                Konsultan <br />
+                Legalitas Bali.
               </h1>
             </div>
             
